@@ -1,0 +1,6 @@
+version: "3" 
+services:
+ recast-tableau-migrator:
+    image: recast-tableau-migrator
+    ports:
+      - "9087:9087"

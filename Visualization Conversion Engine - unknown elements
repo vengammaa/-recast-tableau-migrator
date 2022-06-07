@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+--><!--build 20213.21.0822.2038 -->
+<workbook original-version="18.1" source-build="2021.3.0 (20213.21.0822.2038)" source-platform="win" version="18.1" xmlns:user="http://www.tableausoftware.com/xml/user">
+ <document-format-change-manifest>
+  <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder/>
+  <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault/>
+  <AutoCreateAndUpdateDSDPhoneLayouts/>
+  <MapboxVectorStylesAndLayers/>
+  <_.fcp.MarkAnimation.true...MarkAnimation/>
+  <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy/>
+  <_.fcp.ObjectModelTableType.true...ObjectModelTableType/>
+  <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel/>
+  <SetMembershipControl/>
+  <SheetIdentifierTracking/>
+  <WindowsPersistSimpleIdentifiers/>
+ </document-format-change-manifest>
+ <preferences>
+  <preference name="ui.encoding.shelf.height" value="24"/>
+  <preference name="ui.shelf.height" value="26"/>
+ </preferences>
+ <_.fcp.AnimationOnByDefault.false...style>
+  <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element="animation">
+   <_.fcp.AnimationOnByDefault.false...format attr="animation-on" value="ao-on"/>
+  </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+ </_.fcp.AnimationOnByDefault.false...style>
+ <datasources>
+  <datasource caption="Custom Table (efashion)" inline="true" name="federated.0ul8ra10syb655114svyqz4zndhi" version="18.1">
+   <connection class="federated">
+    <named-connections>
+     <named-connection caption="efashion" name="msaccess.00yliv11v3sqn415skldfympacym">
+      <connection authentication="no" class="msaccess" driver="" filename="C:\Users\10693132\Downloads\efashion.mdb" mdwpath="" server="" username=""/>
+     </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation join="inner" type="join">
+     <clause type="join">
+      <expression op="=">
+       <expression op="[Shop_facts].[Shop_id]"/>
+       <expression op="[Outlet_Lookup].[Shop_id]"/>
+      </expression>
+     </clause>
+     <relation join="inner" type="join">
+      <clause type="join">
+       <expression op="=">
+        <expression op="[Shop_facts].[Article_id]"/>
+        <expression op="[Article_lookup].[Article_id]"/>
+       </expression>
+      </clause>
+      <relation join="inner" type="join">
+       <clause type="join">
+        <expression op="=">
+         <expression op="[Shop_facts].[Week_id]"/>
+         <expression op="[Calendar_year_lookup].[Week_id]"/>
+        </expression>
+       </clause>
+       <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Shop_facts" table="[Shop_facts]" type="table"/>
+       <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Calendar_year_lookup" table="[Calendar_year_lookup]" type="table"/>
+      </relation>
+      <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Article_lookup" table="[Article_lookup]" type="table"/>
+     </relation>
+     <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Outlet_Lookup" table="[Outlet_Lookup]" type="table"/>
+    </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation join="inner" type="join">
+     <clause type="join">
+      <expression op="=">
+       <expression op="[Shop_facts].[Shop_id]"/>
+       <expression op="[Outlet_Lookup].[Shop_id]"/>
+      </expression>
+     </clause>
+     <relation join="inner" type="join">
+      <clause type="join">
+       <expression op="=">
+        <expression op="[Shop_facts].[Article_id]"/>
+        <expression op="[Article_lookup].[Article_id]"/>
+       </expression>
+      </clause>
+      <relation join="inner" type="join">
+       <clause type="join">
+        <expression op="=">
+         <expression op="[Shop_facts].[Week_id]"/>
+         <expression op="[Calendar_year_lookup].[Week_id]"/>
+        </expression>
+       </clause>
+       <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Shop_facts" table="[Shop_facts]" type="table"/>
+       <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Calendar_year_lookup" table="[Calendar_year_lookup]" type="table"/>
+      </relation>
+      <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Article_lookup" table="[Article_lookup]" type="table"/>
+     </relation>
+     <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Outlet_Lookup" table="[Outlet_Lookup]" type="table"/>
+    </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+    <cols>
+     <map key="[Address_1]" value="[Outlet_Lookup].[Address_1]"/>
+     <map key="[Amount_sold]" value="[Shop_facts].[Amount_sold]"/>
+     <map key="[Article_id]" value="[Shop_facts].[Article_id]"/>
+     <map key="[Article_id (Article_lookup)]" value="[Article_lookup].[Article_id (Article_lookup)]"/>
+     <map key="[Article_label]" value="[Article_lookup].[Article_label]"/>
+     <map key="[Category]" value="[Article_lookup].[Category]"/>
+     <map key="[City]" value="[Outlet_Lookup].[City]"/>
+     <map key="[City_Lat]" value="[Outlet_Lookup].[City_Lat]"/>
+     <map key="[City_Long]" value="[Outlet_Lookup].[City_Long]"/>
+     <map key="[Color_code]" value="[Shop_facts].[Color_code]"/>
+     <map key="[Date_open]" value="[Outlet_Lookup].[Date_open]"/>
+     <map key="[Family_code]" value="[Article_lookup].[Family_code]"/>
+     <map key="[Family_name]" value="[Article_lookup].[Family_name]"/>
+     <map key="[Fiscal_Period]" value="[Calendar_year_lookup].[Fiscal_Period]"/>
+     <map key="[Floor_space]" value="[Outlet_Lookup].[Floor_space]"/>
+     <map key="[Holiday_Flag]" value="[Calendar_year_lookup].[Holiday_Flag]"/>
+     <map key="[Invoice_Date]" value="[Shop_facts].[Invoice_Date]"/>
+     <map key="[Invoice_DateTime]" value="[Shop_facts].[Invoice_DateTime]"/>
+     <map key="[Long_opening_hours_flag]" value="[Outlet_Lookup].[Long_opening_hours_flag]"/>
+     <map key="[Manager]" value="[Outlet_Lookup].[Manager]"/>
+     <map key="[Margin]" value="[Shop_facts].[Margin]"/>
+     <map key="[Month_Name]" value="[Calendar_year_lookup].[Month_Name]"/>
+     <map key="[Mth]" value="[Calendar_year_lookup].[Mth]"/>
+     <map key="[Owned_outright_flag]" value="[Outlet_Lookup].[Owned_outright_flag]"/>
+     <map key="[Qtr]" value="[Calendar_year_lookup].[Qtr]"/>
+     <map key="[Quantity_sold]" value="[Shop_facts].[Quantity_sold]"/>
+     <map key="[Sale_price]" value="[Article_lookup].[Sale_price]"/>
+     <map key="[Shop_facts_id]" value="[Shop_facts].[Shop_facts_id]"/>
+     <map key="[Shop_id]" value="[Shop_facts].[Shop_id]"/>
+     <map key="[Shop_id (Outlet_Lookup)]" value="[Outlet_Lookup].[Shop_id (Outlet_Lookup)]"/>
+     <map key="[Shop_name]" value="[Outlet_Lookup].[Shop_name]"/>
+     <map key="[State]" value="[Outlet_Lookup].[State]"/>
+     <map key="[Week_In_Year]" value="[Calendar_year_lookup].[Week_In_Year]"/>
+     <map key="[Week_id]" value="[Shop_facts].[Week_id]"/>
+     <map key="[Week_id (Calendar_year_lookup)]" value="[Calendar_year_lookup].[Week_id (Calendar_year_lookup)]"/>
+     <map key="[Year_Week]" value="[Calendar_year_lookup].[Year_Week]"/>
+     <map key="[Yr]" value="[Calendar_year_lookup].[Yr]"/>
+     <map key="[Zip_code]" value="[Outlet_Lookup].[Zip_code]"/>
+    </cols>
+   </connection>
+   <aliases enabled="yes"/>
+   <_.fcp.ObjectModelTableType.true...column caption="Custom Table" datatype="string" name="[__tableau_internal_object_id__].[Custom Table_ECC4D6FDB7C64E8FBBF66D2E7AB71470]" role="measure" type="quantitative"/>
+   <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage="0.5" _.fcp.SchemaViewerObjectModel.false...measure-percentage="0.4" dim-ordering="alphabetic" measure-ordering="alphabetic" show-structure="true"/>
+   <semantic-values>
+    <semantic-value key="[Country].[Name]" value="&quot;United States&quot;"/>
+   </semantic-values>
+   <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+     <object caption="Custom Table" id="Custom Table_ECC4D6FDB7C64E8FBBF66D2E7AB71470">
+      <properties context="">
+       <relation join="inner" type="join">
+        <clause type="join">
+         <expression op="=">
+          <expression op="[Shop_facts].[Shop_id]"/>
+          <expression op="[Outlet_Lookup].[Shop_id]"/>
+         </expression>
+        </clause>
+        <relation join="inner" type="join">
+         <clause type="join">
+          <expression op="=">
+           <expression op="[Shop_facts].[Article_id]"/>
+           <expression op="[Article_lookup].[Article_id]"/>
+          </expression>
+         </clause>
+         <relation join="inner" type="join">
+          <clause type="join">
+           <expression op="=">
+            <expression op="[Shop_facts].[Week_id]"/>
+            <expression op="[Calendar_year_lookup].[Week_id]"/>
+           </expression>
+          </clause>
+          <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Shop_facts" table="[Shop_facts]" type="table"/>
+          <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Calendar_year_lookup" table="[Calendar_year_lookup]" type="table"/>
+         </relation>
+         <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Article_lookup" table="[Article_lookup]" type="table"/>
+        </relation>
+        <relation connection="msaccess.00yliv11v3sqn415skldfympacym" name="Outlet_Lookup" table="[Outlet_Lookup]" type="table"/>
+       </relation><!--Comment for  relation-->
+      </properties>
+     </object>
+    </objects>
+   </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+  </datasource>
+ </datasources><!--Comment for  datasources-->
+ <mapsources>
+  <mapsource name="Tableau"/>
+ </mapsources>
+ <worksheets>
+  <worksheet name="Visualization Conversion Engine - unknown elements1">
+   <layout-options>
+    <title>
+     <formatted-text>
+      <run bold="true" fontalignment="1"></run>
+     </formatted-text>
+    </title>
+   </layout-options>
+   <table>
+    <view>
+     <datasources>
+      <datasource caption="Custom Table (efashion)" name="federated.0ul8ra10syb655114svyqz4zndhi"/>
+     </datasources>
+     <datasource-dependencies datasource="federated.0ul8ra10syb655114svyqz4zndhi">
+      <column datatype="string" name="[Yr]" role="dimension" semantic-role="[Yr].[Name]" type="nominal"/>
+      <column datatype="string" name="[Qtr]" role="dimension" semantic-role="[Qtr].[Name]" type="nominal"/>
+      <column datatype="integer" name="[Week_In_Year]" role="measure" type="quantitative"/>
+      <column datatype="string" name="[State]" role="dimension" semantic-role="[State].[Name]" type="nominal"/>
+      <column datatype="integer" name="[Quantity_sold]" role="measure" type="quantitative"/>
+      <column datatype="real" name="[Amount_sold]" role="measure" type="quantitative"/>
+      <column datatype="string" name="[Family_name]" role="dimension" semantic-role="[Family_name].[Name]" type="nominal"/>
+      <column-instance column="[Yr]" derivation="None" name="[none:Yr:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Qtr]" derivation="None" name="[none:Qtr:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Week_In_Year]" derivation="Sum" name="[sum:Week_In_Year:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[State]" derivation="None" name="[none:State:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Quantity_sold]" derivation="Sum" name="[sum:Quantity_sold:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[Amount_sold]" derivation="Sum" name="[sum:Amount_sold:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[Family_name]" derivation="None" name="[none:Family_name:nk]" pivot="key" type="nominal"/>
+     </datasource-dependencies>
+     <filter class="categorical" column="[federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names]">
+      <groupfilter function="union" user:op="manual">
+       <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.0ul8ra10syb655114svyqz4zndhi].[sum:Quantity_sold:qk]&quot;"/>
+       <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.0ul8ra10syb655114svyqz4zndhi].[sum:Amount_sold:qk]&quot;"/>
+      </groupfilter>
+     </filter>
+     <slices>
+      <column>[federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names]</column>
+     </slices>
+     <aggregation value="true"/>
+    </view>
+    <style/>
+    <panes>
+     <pane selection-relaxation-option="selection-relaxation-allow">
+      <view>
+       <breakdown value="auto"/>
+      </view>
+      <mark class="Automatic"/>
+      <encodings>
+       <text column="[federated.0ul8ra10syb655114svyqz4zndhi].[Multiple Values]"/>
+      </encodings>
+      <style>
+       <style-rule element="mark">
+        <format attr="mark-labels-show" value="true"/>
+       </style-rule>
+      </style>
+     </pane>
+    </panes>
+    <rows>([federated.0ul8ra10syb655114svyqz4zndhi].[none:Yr:nk] / [federated.0ul8ra10syb655114svyqz4zndhi].[none:Qtr:nk] / [federated.0ul8ra10syb655114svyqz4zndhi].[sum:Week_In_Year:qk] / [federated.0ul8ra10syb655114svyqz4zndhi].[none:State:nk] / [federated.0ul8ra10syb655114svyqz4zndhi].[none:Family_name:nk])</rows>
+    <cols>([federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names])</cols>
+   </table>
+   <simple-id uuid="{95F8CE69-C6F4-C8B2-1749-68EE09B62AC0}"/>
+  </worksheet>
+  <worksheet name="Visualization Conversion Engine - unknown elements2">
+   <layout-options>
+    <title>
+     <formatted-text>
+      <run bold="true" fontalignment="1"></run>
+     </formatted-text>
+    </title>
+   </layout-options>
+   <table>
+    <view>
+     <datasources>
+      <datasource caption="Custom Table (efashion)" name="federated.0ul8ra10syb655114svyqz4zndhi"/>
+     </datasources>
+     <datasource-dependencies datasource="federated.0ul8ra10syb655114svyqz4zndhi">
+      <column datatype="string" name="[Yr]" role="dimension" semantic-role="[Yr].[Name]" type="nominal"/>
+      <column datatype="string" name="[Qtr]" role="dimension" semantic-role="[Qtr].[Name]" type="nominal"/>
+      <column datatype="integer" name="[Week_In_Year]" role="measure" type="quantitative"/>
+      <column datatype="string" name="[State]" role="dimension" semantic-role="[State].[Name]" type="nominal"/>
+      <column datatype="integer" name="[Quantity_sold]" role="measure" type="quantitative"/>
+      <column datatype="real" name="[Amount_sold]" role="measure" type="quantitative"/>
+      <column datatype="string" name="[Family_name]" role="dimension" semantic-role="[Family_name].[Name]" type="nominal"/>
+      <column-instance column="[Yr]" derivation="None" name="[none:Yr:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Qtr]" derivation="None" name="[none:Qtr:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Week_In_Year]" derivation="Sum" name="[sum:Week_In_Year:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[State]" derivation="None" name="[none:State:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Quantity_sold]" derivation="Sum" name="[sum:Quantity_sold:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[Amount_sold]" derivation="Sum" name="[sum:Amount_sold:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[Family_name]" derivation="None" name="[none:Family_name:nk]" pivot="key" type="nominal"/>
+     </datasource-dependencies>
+     <filter class="categorical" column="[federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names]">
+      <groupfilter function="union" user:op="manual">
+       <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.0ul8ra10syb655114svyqz4zndhi].[sum:Amount_sold:qk]&quot;"/>
+      </groupfilter>
+     </filter>
+     <slices>
+      <column>[federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names]</column>
+     </slices>
+     <aggregation value="true"/>
+    </view>
+    <style/>
+    <panes>
+     <pane selection-relaxation-option="selection-relaxation-allow">
+      <view>
+       <breakdown value="auto"/>
+      </view>
+      <mark class="Automatic"/>
+      <encodings>
+       <text column="[federated.0ul8ra10syb655114svyqz4zndhi].[Multiple Values]"/>
+      </encodings>
+      <style>
+       <style-rule element="mark">
+        <format attr="mark-labels-show" value="true"/>
+       </style-rule>
+      </style>
+     </pane>
+    </panes>
+    <rows>([federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names])</rows>
+    <cols>([federated.0ul8ra10syb655114svyqz4zndhi].[none:Yr:nk])</cols>
+   </table>
+   <simple-id uuid="{4F3DE1B1-90F0-0CD2-E909-AC1EE74CB9CC}"/>
+  </worksheet>
+  <worksheet name="Visualization Conversion Engine - unknown elements3">
+   <layout-options>
+    <title>
+     <formatted-text>
+      <run bold="true" fontalignment="1">Cross Tab</run>
+     </formatted-text>
+    </title>
+   </layout-options>
+   <table>
+    <view>
+     <datasources>
+      <datasource caption="Custom Table (efashion)" name="federated.0ul8ra10syb655114svyqz4zndhi"/>
+     </datasources>
+     <datasource-dependencies datasource="federated.0ul8ra10syb655114svyqz4zndhi">
+      <column datatype="string" name="[Yr]" role="dimension" semantic-role="[Yr].[Name]" type="nominal"/>
+      <column datatype="string" name="[Qtr]" role="dimension" semantic-role="[Qtr].[Name]" type="nominal"/>
+      <column datatype="integer" name="[Week_In_Year]" role="measure" type="quantitative"/>
+      <column datatype="string" name="[State]" role="dimension" semantic-role="[State].[Name]" type="nominal"/>
+      <column datatype="integer" name="[Quantity_sold]" role="measure" type="quantitative"/>
+      <column datatype="real" name="[Amount_sold]" role="measure" type="quantitative"/>
+      <column datatype="string" name="[Family_name]" role="dimension" semantic-role="[Family_name].[Name]" type="nominal"/>
+      <column-instance column="[Yr]" derivation="None" name="[none:Yr:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Qtr]" derivation="None" name="[none:Qtr:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Week_In_Year]" derivation="Sum" name="[sum:Week_In_Year:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[State]" derivation="None" name="[none:State:nk]" pivot="key" type="nominal"/>
+      <column-instance column="[Quantity_sold]" derivation="Sum" name="[sum:Quantity_sold:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[Amount_sold]" derivation="Sum" name="[sum:Amount_sold:qk]" pivot="key" type="quantitative"/>
+      <column-instance column="[Family_name]" derivation="None" name="[none:Family_name:nk]" pivot="key" type="nominal"/>
+     </datasource-dependencies>
+     <aggregation value="true"/>
+    </view>
+    <style/>
+    <panes>
+     <pane selection-relaxation-option="selection-relaxation-allow">
+      <view>
+       <breakdown value="auto"/>
+      </view>
+      <mark class="Automatic"/>
+      <encodings>
+       <text column="[federated.0ul8ra10syb655114svyqz4zndhi].[sum:Amount_sold:qk]"/>
+      </encodings>
+      <style>
+       <style-rule element="mark">
+        <format attr="mark-labels-show" value="true"/>
+       </style-rule>
+      </style>
+     </pane>
+    </panes>
+    <rows>([federated.0ul8ra10syb655114svyqz4zndhi].[none:State:nk])</rows>
+    <cols>([federated.0ul8ra10syb655114svyqz4zndhi].[none:Yr:nk])</cols>
+   </table>
+   <simple-id uuid="{E666461E-B535-09C9-C649-B1439BF7283E}"/>
+  </worksheet>
+ </worksheets>
+ <dashboards>
+  <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder="true" name="dashboard1">
+   <style/>
+   <size maxheight="800" maxwidth="1000" minheight="800" minwidth="1000"/>
+   <zones>
+    <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+     <zone h="100000" id="2" param="horz" type-v2="layout-flow" w="100000" x="0" y="0">
+      <zone h="98000" id="3" type-v2="layout-basic" w="98000" x="800" y="1000">
+       <zone h="49000" id="4" name="Visualization Conversion Engine - unknown elements1" w="49200" x="800" y="1000">
+        <zone-style>
+         <format attr="border-color" value="#000000"/>
+         <format attr="border-style" value="none"/>
+         <format attr="border-width" value="0"/>
+         <format attr="margin" value="4"/>
+        </zone-style>
+       </zone>
+       <zone h="49000" id="5" name="Visualization Conversion Engine - unknown elements2" w="49200" x="800" y="50000">
+        <zone-style>
+         <format attr="border-color" value="#000000"/>
+         <format attr="border-style" value="none"/>
+         <format attr="border-width" value="0"/>
+         <format attr="margin" value="4"/>
+        </zone-style>
+       </zone>
+       <zone h="98000" id="6" name="Visualization Conversion Engine - unknown elements3" w="49200" x="50000" y="1000">
+        <zone-style>
+         <format attr="border-color" value="#000000"/>
+         <format attr="border-style" value="none"/>
+         <format attr="border-width" value="0"/>
+         <format attr="margin" value="4"/>
+        </zone-style>
+       </zone>
+      </zone>
+     </zone>
+     <zone-style>
+      <format attr="border-color" value="#000000"/>
+      <format attr="border-style" value="none"/>
+      <format attr="border-width" value="0"/>
+      <format attr="margin" value="8"/>
+     </zone-style>
+    </zone>
+   </zones>
+   <devicelayouts>
+    <devicelayout auto-generated="true" name="Phone">
+     <size maxheight="1200" minheight="1200" sizing-mode="vscroll"/>
+     <zones>
+      <zone h="100000" id="7" type-v2="layout-basic" w="100000" x="0" y="0">
+       <zone h="98000" id="8" param="vert" type-v2="layout-flow" w="98400" x="800" y="1000">
+        <zone fixed-size="280" h="49000" id="1" is-fixed="true" name="Visualization Conversion Engine - unknown elements1" w="49200" x="800" y="1000">
+         <zone-style>
+          <format attr="border-color" value="#000000"/>
+          <format attr="border-style" value="none"/>
+          <format attr="border-width" value="0"/>
+          <format attr="margin" value="4"/>
+          <format attr="padding" value="0"/>
+         </zone-style>
+        </zone>
+        <zone fixed-size="280" h="49000" id="2" is-fixed="true" name="Visualization Conversion Engine - unknown elements2" w="49200" x="800" y="50000">
+         <zone-style>
+          <format attr="border-color" value="#000000"/>
+          <format attr="border-style" value="none"/>
+          <format attr="border-width" value="0"/>
+          <format attr="margin" value="4"/>
+          <format attr="padding" value="0"/>
+         </zone-style>
+        </zone>
+        <zone fixed-size="280" h="98000" id="3" is-fixed="true" name="Visualization Conversion Engine - unknown elements3" w="49200" x="50000" y="1000">
+         <zone-style>
+          <format attr="border-color" value="#000000"/>
+          <format attr="border-style" value="none"/>
+          <format attr="border-width" value="0"/>
+          <format attr="margin" value="4"/>
+          <format attr="padding" value="0"/>
+         </zone-style>
+        </zone>
+       </zone>
+       <zone-style>
+        <format attr="border-color" value="#000000"/>
+        <format attr="border-style" value="none"/>
+        <format attr="border-width" value="0"/>
+        <format attr="margin" value="8"/>
+       </zone-style>
+      </zone>
+     </zones>
+    </devicelayout>
+   </devicelayouts>
+   <simple-id uuid="{CB2EAB1E-9B5F-AE60-3E07-09DCEC014F42}"/>
+  </dashboard>
+ </dashboards>
+ <windows saved-dpi-scale-factor="1.5" source-height="44">
+  <window class="worksheet" name="Visualization Conversion Engine - unknown elements1">
+   <cards>
+    <edge name="left">
+     <strip size="160">
+      <card type="pages"/>
+      <card type="filters"/>
+      <card type="marks"/>
+     </strip>
+    </edge>
+    <edge name="top">
+     <strip size="2147483647">
+      <card type="columns"/>
+     </strip>
+     <strip size="2147483647">
+      <card type="rows"/>
+     </strip>
+     <strip size="2147483647">
+      <card type="title"/>
+     </strip>
+    </edge>
+    <edge name="right">
+     <strip size="160">
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[none:Yr:nk]" type="color"/>
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[none:Qtr:nk]" type="color"/>
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[sum:Week_In_Year:qk]" type="color"/>
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[none:State:nk]" type="color"/>
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[none:Family_name:nk]" type="color"/>
+     </strip>
+    </edge>
+   </cards>
+   <simple-id uuid="{FBD57BA5-27FE-A91D-7682-0AA7AF80E1FF}"/>
+  </window>
+  <window class="worksheet" name="Visualization Conversion Engine - unknown elements2">
+   <cards>
+    <edge name="left">
+     <strip size="160">
+      <card type="pages"/>
+      <card type="filters"/>
+      <card type="marks"/>
+     </strip>
+    </edge>
+    <edge name="top">
+     <strip size="2147483647">
+      <card type="columns"/>
+     </strip>
+     <strip size="2147483647">
+      <card type="rows"/>
+     </strip>
+     <strip size="2147483647">
+      <card type="title"/>
+     </strip>
+    </edge>
+    <edge name="right">
+     <strip size="160">
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[:Measure Names:qk]" type="color"/>
+     </strip>
+    </edge>
+   </cards>
+   <simple-id uuid="{448C103C-4287-1690-4E3F-33C4DB816965}"/>
+  </window>
+  <window class="worksheet" name="Visualization Conversion Engine - unknown elements3">
+   <cards>
+    <edge name="left">
+     <strip size="160">
+      <card type="pages"/>
+      <card type="filters"/>
+      <card type="marks"/>
+     </strip>
+    </edge>
+    <edge name="top">
+     <strip size="2147483647">
+      <card type="columns"/>
+     </strip>
+     <strip size="2147483647">
+      <card type="rows"/>
+     </strip>
+     <strip size="2147483647">
+      <card type="title"/>
+     </strip>
+    </edge>
+    <edge name="right">
+     <strip size="160">
+      <card pane-specification-id="0" param="[federated.0ul8ra10syb655114svyqz4zndhi].[none:State:nk]" type="color"/>
+     </strip>
+    </edge>
+   </cards>
+   <simple-id uuid="{072F314F-E148-BE37-18FC-9BAF85043590}"/>
+  </window>
+  <window class="dashboard" name="Dashboard">
+   <viewpoints>
+    <viewpoint name="Visualization Conversion Engine - unknown elements1">
+     <zoom type="entire-view"/>
+    </viewpoint>
+    <viewpoint name="Visualization Conversion Engine - unknown elements2">
+     <zoom type="entire-view"/>
+    </viewpoint>
+    <viewpoint name="Visualization Conversion Engine - unknown elements3">
+     <zoom type="entire-view"/>
+    </viewpoint>
+   </viewpoints>
+   <active id="-1"/>
+   <simple-id uuid="{39918130-51C1-C718-F84A-B2CE3E849C82}"/>
+  </window>
+ </windows>
+ <thumbnails>
+  <thumbnail height="192" name="Visualization Conversion Engine - unknown elements1" width="192">DD37A480779D1D198048A83463E20297ADE564CAA1C7E25E7F2D46B4741F567CF8B32FD4955C03989CDEC98FC1AA59C9FA95</thumbnail>
+  <thumbnail height="192" name="Visualization Conversion Engine - unknown elements2" width="192">64C09563E18A2F19A86C01F0DB40FB93E8D805E92F636B2175C1AC29B8B200DDCF25FD437F0A480E5A1FEBF62AD20B69E493</thumbnail>
+  <thumbnail height="192" name="Visualization Conversion Engine - unknown elements3" width="192">6ED028BD962795A9D5FE52B198D19A6205F421C9F2156883AE247D11A974A2AE14919922CE36D3A14597A94F3F53400ED95A</thumbnail>
+ </thumbnails>
+</workbook>
